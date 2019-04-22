@@ -46,7 +46,7 @@ var PingModel = function (servers) {
         });
     });
 };
-var server1 = new PingModel(['104.16.59.37:443']);
+var server1 = new PingModel(['localhost']);
 var server2 = new PingModel(['127.0.0.2']);
 var server3 = new PingModel(['unknown']);
 
