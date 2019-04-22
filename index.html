@@ -8,10 +8,21 @@
 		<b><font size = "6">Server Status - City of Heroes</font></b>
 		<p>Quickly iterates through the publically facing servers of the server to provide an accurate reading - fork of http://jsfiddle.net/GSSCD/203/</p>
 		
-		<ul data-bind="foreach:servers">
-			<li> <a href="#" data-bind="text:name,attr:{href: 'http://'+name}">tester</a> <span data-bind="text:status,css:status"></span>
-
-			</li>
-		</ul>
+		<table>
+		<tr>
+			<th>Status</th>
+		</tr>
+		<tr>
+			<td data-bind="foreach:servers">Authserver - <span data-bind="text:status,css:status"></span></td>
+		</tr>
+		<tr>
+			<td data-bind="foreach:servers">Mapserver - <span data-bind="text:status,css:status"></span></td>
+		</tr>
+		<tr>
+			<td data-bind="foreach:servers">Some other third server? - <span data-bind="text:status,css:status"></span></td>
+		</tr>
+		</table>
+			
+				
 		
 <script type="text/javascript" src="knockout-3.5.0.js"></script><script type="text/javascript" src="main.js"></script></body></html>

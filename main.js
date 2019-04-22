@@ -46,13 +46,10 @@ var PingModel = function (servers) {
         });
     });
 };
-var komodel = new PingModel(['localhost',
-    'ws-bdimperio8',
-    'ws-bdimperio8.payformance.net',
-    'ws-bdimperio8.payformance.com',
-    'ws-bdimperio8.payspan.com',
-    'ws-bdimperio8/favicon.ico',
-    '127.0.0.1', 
-    'unknown'
-    ]);
-ko.applyBindings(komodel);
+var server1 = new PingModel(['104.16.59.37:443']);
+var server2 = new PingModel(['127.0.0.2']);
+var server3 = new PingModel(['unknown']);
+
+ko.applyBindings(server1);
+ko.applyBindings(server2);
+ko.applyBindings(server3);
