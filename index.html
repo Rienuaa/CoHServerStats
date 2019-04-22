@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="materialz-master/material-elements.css" />
+		<link rel="stylesheet" type="text/css" href="interface.css" />
+	
+	</head>
+	<body>
+		<b><font size = "6">Server Status - City of Heroes</font></b>
+		<p>Quickly iterates through the publically facing servers of the server to provide an accurate reading - fork of http://jsfiddle.net/GSSCD/203/</p>
+		
+		<ul data-bind="foreach:servers">
+			<li> <a href="#" data-bind="text:name,attr:{href: 'http://'+name}">tester</a> <span data-bind="text:status,css:status"></span>
+
+			</li>
+		</ul>
+		
+<script type="text/javascript" src="knockout-3.5.0.js"></script><script type="text/javascript" src="main.js"></script></body></html>

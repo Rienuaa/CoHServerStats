@@ -1,0 +1,48 @@
+
+.button {
+	width: 200px;
+}
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/* four across */
+.span4 { width: 100%; }
+.span3 { width: 74.6%; }
+.span2 { width: 49.2%; }
+.span1 { width: 23.8%; }
+
+.spanEXTRA { width: 18.0%; }
+.spanEXTRA2 { width: 26.0%; }
+/*  GO FULL WIDTH BELOW 480 PIXELS - code shamelessly stolen */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span4, .span3, .span2, .span1 { width: 100%; }
+}
+
+.responded {
+    color:green;
+}
+.checking,.unchecked {
+    color:#FF8C00;
+}
+.timeout {
+    color:red;
+}
+}
