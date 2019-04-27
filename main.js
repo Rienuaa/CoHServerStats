@@ -32,10 +32,28 @@ function ping(ip, callback) {
 var PingModel = function (servers) {
     var self = this;
     var myServers = [];
+	var index = 0;
+	var label = "";
     ko.utils.arrayForEach(servers, function (location) {
+		index++;
+		switch (index) {
+			case 1:
+				label = "Authserver";
+				break;
+			case 2:
+				label = "Mapserver";
+				break;
+			case 3:
+				label = "Some other third server??";
+				break;
+			default:
+				label = "ya messed it up";
+				break;
+		}
         myServers.push({
             name: location,
-            status: ko.observable('unchecked')
+            status: ko.observable('unchecked'),
+			display: label 
         });
     });
     self.servers = ko.observableArray(myServers);
@@ -46,10 +64,6 @@ var PingModel = function (servers) {
         });
     });
 };
-var server1 = new PingModel(['localhost']);
-var server2 = new PingModel(['127.0.0.2']);
-var server3 = new PingModel(['unknown']);
 
+var server1 = new PingModel(['localhost','127.0.0.1']);
 ko.applyBindings(server1);
-ko.applyBindings(server2);
-ko.applyBindings(server3);
